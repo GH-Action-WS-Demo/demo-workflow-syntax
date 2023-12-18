@@ -34,15 +34,12 @@ jobs:
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - uses: ./
-        with:
-          timezoneLinux: "UTC"
-          timezoneMacos: "GMT"
-          timezoneWindows: "UTC"
       - uses: szenius/set-timezone@v1.2
         with:
-    # Desired timezone for Linux
-          timezoneLinux: Asia/Singapore
+          timezoneLinux: "Asia/Singapore"
+          timezoneMacos: "GMT"
+          timezoneWindows: "UTC"
+  
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
