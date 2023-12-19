@@ -40,9 +40,8 @@ jobs:
           timezoneMacos: "GMT"
           timezoneWindows: "UTC"
   
-      - run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
-      - name: Echo current date
-        run: echo $NOW # Gives "2022-12-11T01:42:20"
+      
+      - run: echo "START_TIME=$(TZ=":Asia/Singapore" date -R|sed 's/.....$//')" >> $GITHUB_ENV
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
