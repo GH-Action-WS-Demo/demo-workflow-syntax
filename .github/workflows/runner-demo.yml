@@ -39,4 +39,4 @@ jobs:
     runs-on: runner-02
     steps:
       - name: Second Runner 
-        run: Hi I am running on the second runner
+        run: echo Hi I am running on the second runner
